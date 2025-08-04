@@ -23,7 +23,10 @@ export default function Header({title, back = false}) {
                 }
                 <Text style={styles.title}>{title}</Text>
             </View>
+            <Text style={{ fontSize: 16 }}>
+                {!back ? "Encontre seu pokemon favorito aqui." : "Aqui está seu pokemon"}
+            </Text>
         </View>
     </View>
-  )
+  );
 }
