@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native'
+import { View, Text, Pressable, Image } from 'react-native'
 import {styles} from "./styles";
 import {Ionicons} from "@expo/vector-icons";
 import {useRouter} from "expo-router";
@@ -10,7 +10,7 @@ export default function Header({title, back = false}) {
 
   return (
     <View styles={styles.container}>
-        <View style={styles.ImageContainer}>
+        <View style={styles.imageContainer}>
             <Image source={imageSource} style={styles.image}/>
         </View>
         <View style={styles.titleContainer}>

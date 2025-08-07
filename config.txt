@@ -6,7 +6,7 @@ Abrir o terminal - CRTL + '
 Criar um projeto react native com expo:
 npx create-expo-app@latest GalloPromo --template blank
 
-cd GalloPromo
+cd pokedex
 
 Extensão Pesquisa React -> ES7+ react/redux/react
 
