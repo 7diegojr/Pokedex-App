@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import Header from '@/components/Header';
 import { pokemons } from "@/data/pokemons"
+import Card from  "../components/Card";
 
 export default function Index() {
 
   const renderPokemon = ({ item }) => (
-    <Text>{item.nome}</Text>
+    <Card pokemon={item}/>
   )
 
   return (

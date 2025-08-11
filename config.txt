@@ -14,3 +14,5 @@ atualizar os pacotes do node
 npm i
 executar o projeto
 npx expo start --localhost --android
+
+3° Commit - Desenvolvimento dos componentes do App
