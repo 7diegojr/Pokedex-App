@@ -16,3 +16,7 @@ executar o projeto
 npx expo start --localhost --android
 
 3° Commit - Desenvolvimento dos componentes do App
+
+npm install polished
+
+pagina 45

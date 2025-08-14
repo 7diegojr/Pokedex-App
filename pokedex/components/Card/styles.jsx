@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const sytles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         width: '100%',
         flexDirection: 'row',
@@ -31,7 +31,7 @@ export const sytles = StyleSheet.create({
         alignItems: 'center'
     },
     imagem: {
-        widht: 140,
+        width: 140,
         height: 140,
         right: 10,
         position: 'absolute',
