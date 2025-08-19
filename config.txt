@@ -1,22 +1,36 @@
-git config --global user.name 7diegojr
-git config --global user.email dfsntsjunior@gmail.com
-
 Abrir o terminal - CRTL + '
-
-Criar um projeto react native com expo:
-npx create-expo-app@latest GalloPromo --template blank
+------------------------------------------------------------------------------
 
 cd pokedex
 
-Extensão Pesquisa React -> ES7+ react/redux/react
+------------------------------------------------------------------------------
 
-atualizar os pacotes do node
+git config --global user.name 7diegojr
+git config --global user.email dfsntsjunior@gmail.com
+
+------------------------------------------------------------------------------
+
+- Atualizar os pacotes do Node e adicionar extensão:
 npm i
-executar o projeto
-npx expo start --localhost --android
-
-3° Commit - Desenvolvimento dos componentes do App
-
 npm install polished
 
+------------------------------------------------------------------------------
+
+- Executar o projeto:
+npx expo start --localhost --android
+npx expo start --web
+
+------------------------------------------------------------------------------
+
+- Criar um projeto React Native com Expo:
+npx create-expo-app@latest NomeProjeto --template blank
+
+------------------------------------------------------------------------------
+
+Instalar extensão de pesquisa React -> ES7+ react/redux/react
+
+------------------------------------------------------------------------------
+
+GITHUB:
+X° Commit - Desenvolvimento dos componentes do App
 pagina 45
