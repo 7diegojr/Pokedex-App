@@ -7,48 +7,48 @@ import TextInfo from "../components/TextInfo";
 const width = Dimensions.get("window").width;
 
 export default function PokemonDetail() {
-    const pokemon = useLocalSearchParams();
-    const tipos =
-        typeof pokemon.Tipo === "string" ? JSON.parse(pokemon.Tipo) : pokemon.Tipo;
+  const pokemon = useLocalSearchParams();
+  const tipos =
+    typeof pokemon.Tipo === "string" ? JSON.parse(pokemon.Tipo) : pokemon.Tipo;
 
-    return (
-        <View style={styles.container}>
-            <Header
-                title={`#${pokemon.Numero} - ${pokemon.Nome}`}
-                back={true}
+  return (
+    <View style={styles.container}>
+      <Header
+        title={`#${pokemon.Numero} - ${pokemon.Nome}`}
+        back={true}
+      />
+      <View style={[styles.card, { backgroundColor: tipos[0].Cor }]}>
+        <View style={styles.imageContainer}>
+          <Image
+            source={{ uri: pokemon.Imagem }}
+            style={styles.image}
+          />
+        </View>
+        <ScrollView
+          horizontal
+          contentContainerStyle={{
+            flexGrow: 1,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+          {tipos.map((tipo) => (
+            <Button
+              tipo={tipo}
+              key={tipo.Nome}
+              large={true}
             />
-            <View style={[styles.card, { backgroundColor: tipos[0].Cor }]}>
-                <View style={styles.imageContainer}>
-                    <Image
-                        source = {{ uri: pokemon.Imagem }}
-                        style = {styles.image}
-                    />
-                </View>
-                <ScrollView
-                    horizontal
-                    contentContainerStyle={{
-                        flexGrow: 1,
-                        flexDirection: "row",
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}>
-                    {tipos.map((tipo) => (
-                    <Button
-                        tipo={tipo}
-                        key={tipo.Nome}
-                        large={true}
-                    />
-                ))}
-                <ScrollView>
-                    <View style={styles.dataContainer}>
-                        <TextInfo label='Descrição' text={pokemon.Descricao} />
-                        <TextInfo label='Espécie' text={pokemon.Especie} />
-                        <TextInfo label='Altura' text={pokemon.Altura + 'mts'} />
-                        <TextInfo label='Peso' text={pokemon.Peso + 'kg'} />
-                    </View>
-                </View>
-        </View> 
-    );
+          ))}
+        </ScrollView>
+        <View style={styles.dataContainer}>
+          <TextInfo label='Descrição' text={pokemon.Descricao} />
+          <TextInfo label='Espécie' text={pokemon.Especie} />
+          <TextInfo label='Altura' text={pokemon.Altura + 'mts'} />
+          <TextInfo label='Peso' text={pokemon.Peso + 'kg'} />
+        </View>
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
